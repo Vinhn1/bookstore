@@ -2085,3 +2085,50 @@ body,
   color: #6ee7b7 !important;
 }
 
+/* Fix thanh trắng và chữ trắng bị che khuất trong Dark Mode */
+[data-theme="dark"] .vietqr-preview-badge {
+  background: #14281a !important;
+  color: #86efac !important;
+  border: 1px solid rgba(52, 211, 153, 0.4) !important;
+}
+
+[data-theme="dark"] .checkout-card__badge {
+  background: #14281a !important;
+  color: #86efac !important;
+  border: 1px solid rgba(52, 211, 153, 0.4) !important;
+}
+
+[data-theme="dark"] .checkout-step.is-active .checkout-step__num {
+  border-color: #34d399 !important;
+  background: #14281a !important;
+  color: #86efac !important;
+}
+
+[data-theme="dark"] .checkout-step.is-complete .checkout-step__num {
+  border-color: #34d399 !important;
+  background: rgba(52, 211, 153, 0.15) !important;
+  color: #34d399 !important;
+}
+
+[data-theme="dark"] .checkout-step__line.is-active {
+  background: #34d399 !important;
+}
+
+[data-theme="dark"] .checkout-badge-pill--green {
+  background: #14281a !important;
+  color: #86efac !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+}
+
+[data-theme="dark"] .checkout-radio {
+  background: #181818 !important;
+  border-color: #404040 !important;
+}
+
+[data-theme="dark"] .checkout-radio:checked {
+  border-color: #34d399 !important;
+  background: #34d399 !important;
+  box-shadow: inset 0 0 0 3px #181818 !important;
+}
+
+
