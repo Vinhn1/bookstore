@@ -1,0 +1,43 @@
+@import url("./pages/auth.css");
+@import url("./pages/catalog.css");
+@import url("./pages/orders.css");
+@import url("./pages/support.css");
+@import url("./pages/consignment.css");
+@import url("./pages/wishlist.css");
+@import url("./pages/settings.css");
+@import url("./pages/cart.css");
+
+.page-section {
+    padding: 28px 0 64px;
+}
+
+.page-section__header {
+    margin-top: 32px;
+}
+
+.page-section__header h1 {
+    margin: 8px 0 0;
+    color: var(--pt-forest);
+    font-family: var(--pt-font-display);
+    font-size: clamp(30px, 4vw, 38px);
+    line-height: 1.15;
+}
+
+.page-section__header p {
+    margin: 8px 0 0;
+    color: var(--pt-muted);
+    font-size: 13px;
+}
+
+.app-page {
+    min-height: 460px;
+}
+
+.app-page__notice {
+    padding: 16px;
+    border: 1px solid var(--pt-line);
+    border-radius: var(--pt-radius-sm);
+    background: var(--pt-paper);
+    color: var(--pt-muted);
+    font-size: 12px;
+}

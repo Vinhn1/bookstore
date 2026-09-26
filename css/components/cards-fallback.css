@@ -1,0 +1,27 @@
+.book-card__cover-fallback { position: relative; aspect-ratio: 2 / 3; overflow: hidden; padding: 20px; color: #f8e9cb; }
+.book-card__cover-fallback::before { position: absolute; inset: 0; opacity: .18; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,.16) 0, rgba(255,255,255,.16) 1px, transparent 1px, transparent 4px), repeating-linear-gradient(90deg, rgba(28,25,20,.16) 0, rgba(28,25,20,.16) 1px, transparent 1px, transparent 5px); content: ""; mix-blend-mode: soft-light; }
+.book-card__cover-fallback.cover-paper { background: linear-gradient(135deg, #a9684c 0%, #78422f 56%, #3a211d 100%); }
+.book-card__cover-fallback.cover-green { background: linear-gradient(135deg, #7e9278 0%, #566a58 54%, #24372d 100%); }
+.book-card__cover-fallback.cover-ink { background: linear-gradient(135deg, #596962 0%, #36433e 55%, #1b2923 100%); }
+.book-card__cover-fallback.cover-stone { background: linear-gradient(135deg, #cec0a3 0%, #aaa18c 58%, #736a5c 100%); color: #26372c; }
+.book-card__cover-fallback.cover-amber { background: linear-gradient(135deg, #c39a57 0%, #8c6034 55%, #4b3023 100%); }
+.book-card__cover-frame { position: relative; z-index: 1; display: flex; height: 100%; flex-direction: column; justify-content: space-between; padding: 16px; border: 1px solid rgba(248,235,197,.68); box-shadow: inset 3px 0 0 rgba(255,255,255,.08), inset -6px 0 14px -12px rgba(17,21,18,.9); }
+.book-card__cover-kicker { font-size: 9px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.book-card__cover-title { font-family: var(--pt-font-display); font-size: 26px; line-height: 1.05; }
+.book-card__cover-author { font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.book-card__media { position: relative; }
+.book-card__item-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.book-card__item-price { flex: 0 0 auto; color: var(--pt-forest); font-size: 12px; font-weight: 600; }
+.auth-password-wrap { position: relative; }
+.auth-password-wrap .pt-input { padding-right: 72px; }
+.auth-password-toggle { position: absolute; top: 50%; right: 10px; display: inline-flex; align-items: center; gap: 4px; padding: 4px; border-radius: 3px; background: transparent; color: var(--pt-muted); font-size: 11px; font-weight: 600; transform: translateY(-50%); }
+.auth-password-toggle:hover { color: var(--pt-amber); }
+.auth-password-toggle .material-symbols-outlined { font-size: 16px; }
+.auth-advisory { max-width: 640px; margin: 18px auto 0; color: var(--pt-muted); text-align: center; font-size: 11px; line-height: 1.6; }
+.auth-register-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 19px 16px; }
+.auth-register-grid__full { grid-column: 1 / -1; }
+
+@media (max-width: 640px) {
+  .auth-register-grid { grid-template-columns: 1fr; }
+  .auth-register-grid__full { grid-column: auto; }
+}

@@ -1,0 +1,124 @@
+/* Shared reading and interaction styles for the original account and support pages. */
+.auth-page,
+.orders-page,
+.support-page,
+.consignment-page,
+.wishlist-page,
+.settings-page {
+  background: var(--pt-surface);
+  color: var(--pt-ink);
+}
+
+.auth-page .page-eyebrow,
+.orders-page .page-eyebrow,
+.support-page .page-eyebrow,
+.consignment-page .page-eyebrow,
+.wishlist-page .page-eyebrow,
+.settings-page .page-eyebrow,
+.catalog-page .page-eyebrow {
+  color: #815210;
+}
+
+.auth-card,
+.auth-trust,
+.order-card,
+.support-search-card,
+.support-topic-card,
+.support-policy,
+.consignment-form-card,
+.settings-section,
+.settings-info-card,
+.settings-notifications {
+  border-color: #ded6c8;
+  border-radius: 6px;
+}
+
+.pt-account-context__meta,
+.pt-account-context__nav-link,
+.pt-account-context__metric-label,
+.order-card__item-meta,
+.orders-list__header span,
+.wishlist-results,
+.settings-info-card__row,
+.support-topic-card p {
+  font-size: 12px;
+  line-height: 1.55;
+}
+.book-card__meta,
+.book-card__hint,
+.order-card__label,
+.order-card__tracking-head,
+.site-footer__copyright { font-size: 11px; }
+.book-card__note { font-size: 12px; }
+.book-card__old-price { color: #5f6b61; font-size: 11px; }
+.book-card__action:hover { background: #31543d; color: #fff; }
+.catalog-pagination__button:disabled { color: #5f6b61; }
+
+.pt-button--primary:hover,
+.pt-button--amber:hover,
+.pt-chip.is-active:hover,
+.pt-segmented__item.is-active:hover,
+.pt-tabs__item.is-active:hover,
+.pt-account-context__nav-link.is-active:hover,
+.settings-nav__link.is-active:hover,
+.catalog-pagination__button.is-active:hover {
+  color: #fff;
+}
+
+.pt-button--amber,
+.support-search-card__label { background: #8a570c; color: #fff; }
+.pt-button--amber:hover { background: #704605; }
+.pt-button--primary:focus-visible,
+.pt-button--amber:focus-visible,
+.pt-chip:focus-visible,
+.catalog-filter-tag:focus-visible { outline: 3px solid #d5a963; outline-offset: 2px; }
+
+.support-contact__panel .page-eyebrow,
+.consignment-trust-panel__main .page-eyebrow,
+.wishlist-banner .page-eyebrow,
+.librarian-banner .page-eyebrow { color: #f0cc94; }
+.auth-split__aside .auth-note .material-symbols-outlined { color: #f0cc94; }
+.support-contact__panel h2,
+.wishlist-banner h2,
+.librarian-banner h2 { color: #fff; }
+.support-contact__panel .pt-button--ghost:hover,
+.wishlist-banner .pt-button--ghost:hover,
+.librarian-banner .pt-button--ghost:hover { background: #f5efe3; color: #1d3729; }
+
+.pt-account-context__nav-link,
+.settings-nav__link,
+.pt-tabs__item,
+.pt-segmented__item { display: inline-flex; align-items: center; }
+.pt-account-context__nav-link:hover,
+.settings-nav__link:hover,
+.pt-tabs__item:hover,
+.pt-segmented__item:hover { background: #e9ede6; color: #24432f; }
+.pt-account-context__nav-link.is-active:hover,
+.settings-nav__link.is-active:hover,
+.pt-tabs__item.is-active:hover,
+.pt-segmented__item.is-active:hover { background: #294b35; color: #fff; }
+
+.orders-search,
+.wishlist-search,
+.support-search-form__input,
+.support-suggestion,
+.settings-privacy { border-color: #d7cfc1; }
+.orders-search input,
+.wishlist-search input,
+.support-search-form__input input { color: #243a2d; }
+
+.consignment-trust-panel__main p,
+.support-contact__panel p,
+.wishlist-banner p { color: #e1e9de; }
+.consignment-visual__footer { color: #e0e7da; }
+.consignment-visual__book { background: #8f4a25; }
+.consignment-visual__book-meta { color: #fff0d1; }
+
+@media (max-width: 767px) {
+  .auth-page,
+  .orders-page,
+  .support-page,
+  .consignment-page,
+  .wishlist-page,
+  .settings-page { font-size: 16px; }
+}

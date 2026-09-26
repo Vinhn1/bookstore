@@ -1,0 +1,377 @@
+﻿/*
+ * The Page Turner — Mobile Responsive Overrides
+ * Breakpoints: 480px (mobile), 640px (large mobile), 768px (tablet)
+ * These supplement the per-page @media rules already present in each CSS file.
+ */
+
+/* ============================================================
+   GLOBAL / UTILITY
+   ============================================================ */
+@media (max-width: 768px) {
+  .pt-main {
+    padding-bottom: 48px;
+  }
+  .page-eyebrow {
+    font-size: 10px;
+  }
+}
+
+/* ============================================================
+   STOREFRONT
+   ============================================================ */
+@media (max-width: 480px) {
+  .home-hero,
+  .home-hero__inner {
+    min-height: 420px;
+  }
+  .home-hero h1 {
+    font-size: clamp(28px, 9vw, 42px);
+  }
+  .home-hero__foot {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .home-hero__foot .shop-button {
+    width: 100%;
+    justify-content: center;
+  }
+  .home-section {
+    padding-block: 40px;
+  }
+  .section-heading h2 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+  .home-categories {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .home-category {
+    min-height: 140px;
+    padding: 14px;
+  }
+  .product-summary__actions {
+    flex-direction: column;
+  }
+  .product-summary__actions > * {
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   CART & CHECKOUT
+   ============================================================ */
+@media (max-width: 768px) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+  }
+  .cart-aside-col {
+    order: -1;
+  }
+  .cart-summary-card,
+  .checkout-summary-card {
+    position: static;
+  }
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+  .checkout-summary-col {
+    order: -1;
+  }
+  .vietqr-display-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .vietqr-code-wrapper {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .order-receipt-meta-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .checkout-step__label {
+    font-size: 11px;
+  }
+  .checkout-step__line {
+    max-width: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-page {
+    padding-top: 16px;
+  }
+  .cart-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .cart-item {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+  }
+  .cart-item__media {
+    flex: 0 0 72px;
+    height: 100px;
+  }
+  .cart-item__footer {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .checkout-form-row {
+    grid-template-columns: 1fr;
+  }
+  .order-receipt-actions {
+    flex-direction: column;
+  }
+  .order-receipt-actions > * {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .order-success-hero h1 {
+    font-size: 26px;
+  }
+  .checkout-step__label {
+    display: none;
+  }
+}
+
+/* ============================================================
+   WISHLIST
+   ============================================================ */
+@media (max-width: 768px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .wishlist-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+  .wishlist-filters {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .wishlist-filter-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   ORDERS
+   ============================================================ */
+@media (max-width: 768px) {
+  .orders-layout {
+    grid-template-columns: 1fr;
+  }
+  .order-card {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .order-card__actions {
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 480px) {
+  .orders-page {
+    padding-top: 16px;
+  }
+  .order-card {
+    padding: 16px;
+  }
+  .order-filter-tabs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .order-filter-tabs button {
+    flex: 1;
+    min-width: calc(50% - 4px);
+  }
+}
+
+/* ============================================================
+   SETTINGS / PROFILE
+   ============================================================ */
+@media (max-width: 768px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+  .settings-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    border: none;
+    padding: 0;
+  }
+  .settings-nav-link {
+    flex: 1;
+    min-width: calc(50% - 4px);
+    text-align: center;
+    justify-content: center;
+    padding: 10px 12px;
+    border: 1px solid var(--pt-line);
+    border-radius: var(--pt-radius-sm);
+  }
+  .settings-section {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .settings-page {
+    padding-top: 16px;
+  }
+  .settings-nav-link {
+    font-size: 12px;
+    padding: 8px;
+  }
+  .settings-form-row {
+    grid-template-columns: 1fr;
+  }
+  .settings-avatar-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .settings-address-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .theme-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   SUPPORT PAGE
+   ============================================================ */
+@media (max-width: 768px) {
+  .support-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 24px;
+    margin-top: 16px;
+  }
+  .support-hero h1 {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+  .support-faq__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .support-contact__panel {
+    grid-template-columns: 1fr;
+    padding: 28px 24px;
+  }
+  .support-contact__details {
+    padding: 20px 0 0;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    border-left: none;
+  }
+}
+@media (max-width: 480px) {
+  .support-page {
+    padding-top: 16px;
+  }
+  .support-topic-grid {
+    grid-template-columns: 1fr;
+  }
+  .support-search-form {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .support-search-form .pt-button {
+    width: 100%;
+  }
+  .support-faq__intro h2 {
+    font-size: 26px;
+  }
+  .support-contact__actions {
+    flex-direction: column;
+  }
+  .support-contact__actions > * {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   AUTH PAGES
+   ============================================================ */
+@media (max-width: 640px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+  .auth-visual {
+    display: none;
+  }
+  .auth-form-wrap {
+    padding: 28px 20px;
+    min-height: auto;
+  }
+  .auth-form__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 480px) {
+  .auth-page {
+    padding: 24px 0 48px;
+  }
+  .auth-form-wrap {
+    padding: 20px 16px;
+  }
+  .auth-form__social-row {
+    flex-direction: column;
+  }
+}
+
+/* ============================================================
+   CONSIGNMENT
+   ============================================================ */
+@media (max-width: 768px) {
+  .consignment-hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .consignment-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .consignment-steps {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .consignment-page {
+    padding-top: 16px;
+  }
+  .consignment-value-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+@media (max-width: 480px) {
+  .site-footer__inner {
+    padding-block: 32px 20px;
+  }
+  .site-footer__newsletter {
+    width: 100%;
+  }
+  .site-footer__newsletter input {
+    width: 100%;
+  }
+}

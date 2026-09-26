@@ -1,0 +1,2087 @@
+/* ==========================================================================
+   THEME STYLES - CHẾ ĐỘ SÁNG / TỐI (LIGHT & DARK MODE)
+   Nền tối trung tính (Neutral Dark / True Dark - Không ám xanh)
+   Đảm bảo độ tương phản cao chuẩn WCAG AAA cho tiêu đề và WCAG AA cho nội dung
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. TOKENS CHO CHẾ ĐỘ TỐI (NEUTRAL DARK THEME)
+   Hoàn toàn loại bỏ sắc thái xanh, sử dụng thang độ xám đen cao cấp
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* Bề mặt & Nền trang */
+  --pt-surface: #121212;
+  --pt-paper: #181818;
+  --pt-surface-deep: #222222;
+  --pt-white: #1e1e1e;
+
+  /* Màu chữ & Tiêu đề - Tương phản cực cao */
+  --pt-forest: #ffffff;
+  --pt-forest-deep: #0a0a0a;
+  --pt-ink: #f0f0f0;
+  --pt-muted: #a6a6a6;
+
+  /* Màu điểm nhấn & Hổ phách */
+  --pt-amber: #f5a623;
+  --pt-amber-soft: #332412;
+  --pt-amber-bright: #ffca7b;
+  --pt-burgundy: #f87171;
+
+  /* Đường kẻ & Viền trung tính */
+  --pt-line: #2e2e2e;
+  --pt-outline: #525252;
+  --pt-outline-soft: #383838;
+
+  /* Trạng thái & Nhãn */
+  --pt-success-bg: #14281a;
+  --pt-success-ink: #86efac;
+  --pt-warning-bg: #33240e;
+  --pt-warning-ink: #fde047;
+  --pt-used-bg: #2d2013;
+  --pt-used-ink: #fed7aa;
+  --pt-danger-bg: #361519;
+  --pt-danger-ink: #fca5a5;
+
+  /* Đổ bóng sâu trên nền tối */
+  --pt-shadow-card: 0 8px 24px -4px rgba(0, 0, 0, 0.65), 0 2px 8px -1px rgba(0, 0, 0, 0.45);
+  --pt-shadow-soft: 0 4px 14px -3px rgba(0, 0, 0, 0.5);
+  --pt-shadow-strong: 0 18px 38px -16px rgba(0, 0, 0, 0.85);
+}
+
+/* --------------------------------------------------------------------------
+   2. HIỆU ỨNG CHUYỂN ĐỔI MƯỢT MÀ KHI ĐỔI GIAO DIỆN
+   -------------------------------------------------------------------------- */
+body,
+.site-header,
+.site-nav,
+.site-footer,
+.pt-card,
+.book-card,
+.shop-card,
+.consignment-form-card,
+.settings-section,
+.settings-info-card,
+.settings-notifications,
+.auth-card,
+.order-card {
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* --------------------------------------------------------------------------
+   3. KHUNG TRANG CHUNG & KHU VỰC ĐẦU / CHÂN TRANG
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] body {
+  background-color: var(--pt-surface);
+  color: var(--pt-ink);
+}
+
+[data-theme="dark"] .site-header,
+[data-theme="dark"] .site-nav {
+  background: #181818;
+  border-color: #2b2b2b;
+}
+
+[data-theme="dark"] .site-header__utility {
+  background: #101010;
+  border-color: #222222;
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .site-search {
+  background: #242424;
+  border-color: #383838;
+}
+
+[data-theme="dark"] .site-search input {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .site-search input::placeholder {
+  color: #888888;
+}
+
+[data-theme="dark"] .site-header__action--button {
+  background: #222222;
+  border-color: #383838;
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .site-header__action--button:hover {
+  background: #2c2c2c;
+  border-color: var(--pt-amber);
+}
+
+[data-theme="dark"] .site-header__action--button.is-primary {
+  background: var(--pt-amber);
+  color: #121212;
+  border-color: var(--pt-amber);
+  font-weight: 700;
+}
+
+[data-theme="dark"] .site-footer {
+  background: #101010;
+  border-color: #222222;
+}
+
+[data-theme="dark"] .site-footer__newsletter input {
+  background: #1e1e1e;
+  border-color: #383838;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .home-page,
+[data-theme="dark"] .search-page,
+[data-theme="dark"] .product-page,
+[data-theme="dark"] .catalog-page,
+[data-theme="dark"] .consignment-page,
+[data-theme="dark"] .orders-page,
+[data-theme="dark"] .support-page,
+[data-theme="dark"] .settings-page,
+[data-theme="dark"] .wishlist-page {
+  background: var(--pt-surface);
+  color: var(--pt-ink);
+}
+
+/* --------------------------------------------------------------------------
+   4. CÁC NÚT BẤM VÀ Ô NHẬP LIỆU CHUNG (CONTROLS & FORMS)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .pt-input,
+[data-theme="dark"] .pt-select,
+[data-theme="dark"] .pt-textarea {
+  background: #222222;
+  border-color: #383838;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .pt-input:focus,
+[data-theme="dark"] .pt-select:focus,
+[data-theme="dark"] .pt-textarea:focus {
+  background: #282828;
+  border-color: var(--pt-amber);
+}
+
+[data-theme="dark"] .pt-button--secondary {
+  background: #242424;
+  border-color: #3d3d3d;
+  color: #f0f0f0;
+}
+
+[data-theme="dark"] .pt-button--secondary:hover {
+  background: #2f2f2f;
+  border-color: #555555;
+}
+
+[data-theme="dark"] .pt-button--ghost {
+  background: #1a1a1a;
+  border-color: #333333;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .pt-button--ghost:hover {
+  background: #262626;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .pt-button--primary {
+  background: var(--pt-amber) !important;
+  border-color: var(--pt-amber) !important;
+  color: #121212 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.3) !important;
+}
+
+[data-theme="dark"] .pt-button--primary:hover {
+  background: var(--pt-amber-bright) !important;
+  border-color: var(--pt-amber-bright) !important;
+  color: #121212 !important;
+}
+
+[data-theme="dark"] .pt-chip.is-active,
+[data-theme="dark"] .pt-segmented__item.is-active,
+[data-theme="dark"] .pt-tabs__item.is-active {
+  background: var(--pt-amber) !important;
+  border-color: var(--pt-amber) !important;
+  color: #121212 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .pt-segmented,
+[data-theme="dark"] .pt-tabs {
+  background: #181818 !important;
+  border-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .site-brand__mark {
+  background: #252525 !important;
+  color: #ffb74d !important;
+  border: 1px solid #383838 !important;
+}
+
+[data-theme="dark"] .site-header__member-mark {
+  background: #252525 !important;
+  color: #ffffff !important;
+  border: 1px solid #383838 !important;
+}
+
+[data-theme="dark"] .toast {
+  background: #222222 !important;
+  color: #ffffff !important;
+  border: 1px solid #3d3d3d !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] .wishlist-banner,
+[data-theme="dark"] .support-contact__panel,
+[data-theme="dark"] .consignment-visual,
+[data-theme="dark"] .consignment-trust-panel__main,
+[data-theme="dark"] .auth-split__aside {
+  background: #181818 !important;
+  color: #ffffff !important;
+  border: 1px solid #2d2d2d !important;
+}
+
+[data-theme="dark"] .support-contact__panel p,
+[data-theme="dark"] .support-contact__detail-label {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .support-contact__details,
+[data-theme="dark"] .support-contact__detail {
+  border-color: #333333 !important;
+}
+
+[data-theme="dark"] .process-step__number,
+[data-theme="dark"] .auth-trust__mark {
+  background: #252525 !important;
+  color: #ffb74d !important;
+  border: 1px solid #383838 !important;
+}
+
+[data-theme="dark"] .settings-actions {
+  background: #161616 !important;
+  border-top-color: #2b2b2b !important;
+}
+
+[data-theme="dark"] .settings-nav__link.is-active {
+  background: var(--pt-amber) !important;
+  color: #121212 !important;
+  font-weight: 700 !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. KHẮC PHỤC LỖI TƯƠNG PHẢN TRANG DANH MỤC (.catalog-page / ẢNH 1)
+   Các ô danh mục không còn giữ nền kem; đổi sang nền tối với chữ trắng sáng 100%
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .catalog-doors .catalog-door,
+[data-theme="dark"] .catalog-door--economics,
+[data-theme="dark"] .catalog-door--rare,
+[data-theme="dark"] .catalog-door--deals {
+  background: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+  color: #e5e5e5 !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .catalog-door:hover {
+  background: #242424 !important;
+  border-color: var(--pt-amber) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.65);
+}
+
+[data-theme="dark"] .catalog-door h2 {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .catalog-door p {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-door__number {
+  color: #ffb74d !important;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .catalog-door__bottom {
+  border-top: 1px solid #333333 !important;
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-door__bottom span {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-landing__hero {
+  background: #181818 !important;
+  border: 1px solid #2d2d2d !important;
+}
+
+[data-theme="dark"] .catalog-landing__hero h1 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-landing__hero h1 em {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-landing__hero p {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-landing__index {
+  background: #222222 !important;
+  border: 1px solid #383838 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-landing__index strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-landing__index p {
+  color: #d0d0d0 !important;
+}
+
+[data-theme="dark"] .catalog-landing__index div {
+  border-top-color: #383838 !important;
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-section-heading h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-section-heading p {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .catalog-section-heading a {
+  color: #ffb74d !important;
+}
+
+/* Khối Hero trang thể loại & trang chức năng đặc thù (Sách giảm giá, Tâm lý học, Sưu tầm, Văn học, Kinh tế, Ký gửi, Hỗ trợ, Tìm kiếm) */
+[data-theme="dark"] .catalog-hero,
+[data-theme="dark"] .catalog-page--deals .catalog-hero,
+[data-theme="dark"] .catalog-page--psychology .catalog-hero,
+[data-theme="dark"] .catalog-page--rare .catalog-hero,
+[data-theme="dark"] .catalog-page--literature .catalog-hero,
+[data-theme="dark"] .catalog-page--economics .catalog-hero,
+[data-theme="dark"] .consignment-hero,
+[data-theme="dark"] .support-hero {
+  background: #161616 !important;
+  border: 1px solid #2d2d2d !important;
+  border-radius: 8px !important;
+  padding: 48px !important;
+}
+
+[data-theme="dark"] .search-page__heading {
+  background: #161616 !important;
+  border: 1px solid #2d2d2d !important;
+  border-radius: 8px !important;
+  padding: 40px 48px !important;
+}
+
+[data-theme="dark"] .search-page__count {
+  background: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-hero__copy h1,
+[data-theme="dark"] .catalog-page--deals .catalog-hero h1,
+[data-theme="dark"] .catalog-page--psychology .catalog-hero h1,
+[data-theme="dark"] .catalog-page--rare .catalog-hero h1,
+[data-theme="dark"] .catalog-page--literature .catalog-hero h1,
+[data-theme="dark"] .catalog-page--economics .catalog-hero h1,
+[data-theme="dark"] .consignment-hero h1,
+[data-theme="dark"] .support-hero h1,
+[data-theme="dark"] .search-page__heading h1 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .consignment-hero h1 span {
+  color: #f87171 !important;
+}
+
+[data-theme="dark"] .catalog-hero__copy > p,
+[data-theme="dark"] .catalog-page--deals .catalog-hero p,
+[data-theme="dark"] .catalog-page--psychology .catalog-hero p,
+[data-theme="dark"] .catalog-page--rare .catalog-hero p,
+[data-theme="dark"] .catalog-page--literature .catalog-hero p,
+[data-theme="dark"] .catalog-page--economics .catalog-hero p,
+[data-theme="dark"] .consignment-hero p,
+[data-theme="dark"] .support-hero p,
+[data-theme="dark"] .search-page__heading p {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-hero__meta {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-hero__stat strong,
+[data-theme="dark"] .catalog-hero__meta strong,
+[data-theme="dark"] .catalog-page--rare .catalog-hero__meta strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-hero__stat span,
+[data-theme="dark"] .catalog-hero__note,
+[data-theme="dark"] .catalog-hero__meta span {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-hero__meta b {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-hero__divider,
+[data-theme="dark"] .catalog-hero__meta i {
+  background: #3e3e3e !important;
+}
+
+[data-theme="dark"] .catalog-hero__jump,
+[data-theme="dark"] .catalog-page--rare .catalog-hero__jump {
+  color: #ffb74d !important;
+  border-bottom-color: transparent !important;
+}
+
+[data-theme="dark"] .catalog-hero__jump-text {
+  border-bottom-color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-hero__jump-arrow {
+  background: rgba(255, 183, 77, 0.16) !important;
+  color: #ffb74d !important;
+}
+
+/* Các nhãn đầu mục (page-eyebrow) trên nền tối */
+[data-theme="dark"] .page-eyebrow,
+[data-theme="dark"] .catalog-page .page-eyebrow,
+[data-theme="dark"] .catalog-page--rare .catalog-hero .page-eyebrow {
+  color: #ffb74d !important;
+}
+
+/* Khối sách nổi bật (catalog-feature) trong trang thể loại */
+[data-theme="dark"] .catalog-feature,
+[data-theme="dark"] .catalog-page--economics .catalog-feature,
+[data-theme="dark"] .catalog-page--rare .catalog-feature,
+[data-theme="dark"] .catalog-page--deals .catalog-feature {
+  background: #181818 !important;
+  border: 1px solid #2a2a2a !important;
+  border-radius: 8px !important;
+  color: #f0f0f0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .catalog-feature__art,
+[data-theme="dark"] .catalog-page--economics .catalog-feature__art,
+[data-theme="dark"] .catalog-page--rare .catalog-feature__art,
+[data-theme="dark"] .catalog-page--deals .catalog-feature__art {
+  background: #111111 !important;
+}
+
+[data-theme="dark"] .catalog-feature__copy span {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-feature__copy strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-feature__copy small {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-feature__copy b {
+  color: #ffb74d !important;
+}
+
+/* Các ô thẻ câu chuyện & gợi ý đọc (catalog-story > div) - Sửa triệt để lỗi chữ trắng trên nền kem */
+[data-theme="dark"] .catalog-story > div,
+[data-theme="dark"] .catalog-story--literature > div,
+[data-theme="dark"] .catalog-story--economics > div,
+[data-theme="dark"] .catalog-story--rare > div,
+[data-theme="dark"] .catalog-story--deals > div,
+[data-theme="dark"] .catalog-story--psychology > div {
+  background: #1c1c1c !important;
+  border: 1px solid #2e2e2e !important;
+  color: #f0f0f0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .catalog-story strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-story strong i {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-story h2,
+[data-theme="dark"] .catalog-story--economics h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-story p {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-story span,
+[data-theme="dark"] .catalog-story--economics span,
+[data-theme="dark"] .catalog-story .page-eyebrow {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-story button,
+[data-theme="dark"] .catalog-story a {
+  color: #ffb74d !important;
+  border-bottom-color: #ffb74d !important;
+}
+
+[data-theme="dark"] .catalog-story button:hover,
+[data-theme="dark"] .catalog-story a:hover {
+  color: #ffca7b !important;
+}
+
+/* Bộ điều khiển kệ sách (tabs & select) */
+[data-theme="dark"] .catalog-shelf__controls {
+  border-top-color: #2e2e2e !important;
+  border-bottom-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .catalog-shelf__tabs button {
+  background: #222222 !important;
+  border: 1px solid #383838 !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .catalog-shelf__tabs button.is-active {
+  background: #ffb74d !important;
+  border-color: #ffb74d !important;
+  color: #121212 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .catalog-shelf__controls label {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .catalog-shelf__controls select {
+  background: #222222 !important;
+  border: 1px solid #383838 !important;
+  color: #ffffff !important;
+}
+
+/* Nhãn tiết kiệm trên thẻ sách giảm giá */
+[data-theme="dark"] .catalog-book-item__saving {
+  background: #2f2010 !important;
+  border: 1px solid #4a341a !important;
+  color: #ffca7b !important;
+}
+
+/* Khối tiếp tục khám phá ở chân trang danh mục */
+[data-theme="dark"] .catalog-next {
+  background: #181818 !important;
+  border: 1px solid #2d2d2d !important;
+}
+
+[data-theme="dark"] .catalog-next h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-next p {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .catalog-curator {
+  background: #1e1e1e !important;
+  border-color: #333333 !important;
+}
+
+[data-theme="dark"] .catalog-curator h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .catalog-curator p {
+  color: #b5b5b5 !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. KHẮC PHỤC BỘ LỌC TÌM KIẾM (.search-filters / ẢNH 2)
+   Sidebar bộ lọc không còn nền xanh; các ô input không còn màu trắng toát
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .search-filters {
+  background: #181818 !important;
+  border: 1px solid #2d2d2d !important;
+  color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .search-filters__head {
+  border-bottom: 1px solid #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-filters__head strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-filters__head .material-symbols-outlined {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .search-filters__head button {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .search-filter__group {
+  border-bottom: 1px solid #262626 !important;
+}
+
+[data-theme="dark"] .search-filter__group > label,
+[data-theme="dark"] .search-filter__group legend {
+  color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .search-filter__group input:not([type=checkbox]),
+[data-theme="dark"] .search-filter__group select {
+  background: #252525 !important;
+  border: 1px solid #3d3d3d !important;
+  color: #ffffff !important;
+  font-size: 13px !important;
+}
+
+[data-theme="dark"] .search-filter__group input:not([type=checkbox]):focus,
+[data-theme="dark"] .search-filter__group select:focus {
+  background: #2c2c2c !important;
+  border-color: var(--pt-amber) !important;
+  outline: none;
+}
+
+[data-theme="dark"] .search-filter__group input::placeholder {
+  color: #7d7d7d !important;
+}
+
+[data-theme="dark"] .search-choice {
+  color: #cccccc !important;
+}
+
+[data-theme="dark"] .search-choice input[type=checkbox] {
+  accent-color: #ffb74d !important;
+}
+
+[data-theme="dark"] .search-results__toolbar {
+  border-bottom: 1px solid #2d2d2d !important;
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .search-results__toolbar strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-results__toolbar select {
+  background: #252525 !important;
+  border: 1px solid #3d3d3d !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-page__count {
+  background: #222222 !important;
+  border: 1px solid #333333 !important;
+  color: #cccccc !important;
+}
+
+[data-theme="dark"] .search-pagination button {
+  background: #222222 !important;
+  border: 1px solid #383838 !important;
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .search-pagination button.is-active {
+  background: #ffb74d !important;
+  border-color: #ffb74d !important;
+  color: #121212 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .search-tag {
+  background: #262626 !important;
+  border: 1px solid #3d3d3d !important;
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .search-empty {
+  background: #181818 !important;
+  border: 1px dashed #333333 !important;
+  color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .search-empty h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .search-empty p {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .search-request {
+  background: #1e1e1e !important;
+  border: 1px solid #333333 !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   7. THẺ SÁCH VÀ LƯỚI SÁCH (.shop-card & .book-card / ẢNH 2)
+   Đổi nền sang xám đen, chữ tiêu đề trắng sáng, giá sách màu vàng hổ phách
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .shop-card,
+[data-theme="dark"] .book-card {
+  background: #1c1c1c !important;
+  border: 1px solid #2d2d2d !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .shop-card:hover,
+[data-theme="dark"] .book-card:hover {
+  transform: translateY(-3px);
+  border-color: #444444 !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="dark"] .shop-card__visual {
+  background: #141414 !important;
+}
+
+[data-theme="dark"] .shop-card h3,
+[data-theme="dark"] .book-card__title {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .shop-card__author,
+[data-theme="dark"] .book-card__author {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .shop-card__meta,
+[data-theme="dark"] .book-card__meta {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .shop-card__topline {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .shop-card__topline span {
+  color: #8c8c8c !important;
+}
+
+[data-theme="dark"] .shop-card__bottom strong {
+  color: #ffb74d !important;
+  font-size: 18px;
+}
+
+[data-theme="dark"] .shop-card__bottom del,
+[data-theme="dark"] .book-card__old-price {
+  color: #707070 !important;
+}
+
+[data-theme="dark"] .shop-card__detail {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .shop-card__detail:hover {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .shop-card__badge {
+  background: #2a2012 !important;
+  color: #ffca7b !important;
+  border: 1px solid #4d381c !important;
+}
+
+[data-theme="dark"] .shop-card__heart,
+[data-theme="dark"] .book-card__wishlist,
+[data-theme="dark"] .product-summary__heart {
+  background: #252525 !important;
+  color: #a0a0a0 !important;
+  border: 1px solid #383838 !important;
+}
+
+[data-theme="dark"] .shop-card__heart:hover,
+[data-theme="dark"] .book-card__wishlist:hover,
+[data-theme="dark"] .product-summary__heart:hover {
+  color: #fb7185 !important;
+  border-color: #fb7185 !important;
+}
+
+[data-theme="dark"] .shop-card__heart.is-saved,
+[data-theme="dark"] .book-card__wishlist.is-saved,
+[data-theme="dark"] .product-summary__heart.is-saved {
+  background: #2d1518 !important;
+  color: #ff4d6d !important;
+  border-color: #ff4d6d !important;
+  box-shadow: 0 0 16px rgba(255, 77, 109, 0.4) !important;
+}
+
+[data-theme="dark"] .shop-card__heart.is-saved .material-symbols-outlined,
+[data-theme="dark"] .book-card__wishlist.is-saved .material-symbols-outlined,
+[data-theme="dark"] .product-summary__heart.is-saved .material-symbols-outlined {
+  color: #ff4d6d !important;
+  font-variation-settings: 'FILL' 1, 'wght' 600 !important;
+}
+
+[data-theme="dark"] .book-card__price {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .book-card__hint {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .book-card__note {
+  background: #222222 !important;
+  color: #a8a8a8 !important;
+}
+
+[data-theme="dark"] .book-card__footer {
+  border-top: 1px solid #2d2d2d !important;
+}
+
+[data-theme="dark"] .book-card__action {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+  border: 1px solid #444444 !important;
+}
+
+[data-theme="dark"] .book-card__action:hover {
+  background: #ffb74d !important;
+  color: #121212 !important;
+  border-color: #ffb74d !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. TRANG CHỦ & CÁC KHỐI ĐẶC TRƯNG (.home-page)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .promise-strip {
+  background: #161616 !important;
+  border-bottom: 1px solid #282828 !important;
+}
+
+[data-theme="dark"] .promise-strip__item {
+  border-right-color: #282828 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .promise-strip__item strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .promise-strip__item span:not(.material-symbols-outlined) {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .promise-strip__item > .material-symbols-outlined {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .home-section--paper {
+  background: #161616 !important;
+}
+
+[data-theme="dark"] .section-heading h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .section-heading p {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .section-kicker {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .home-features {
+  background: #141414 !important;
+  border-color: #282828 !important;
+}
+
+[data-theme="dark"] .home-features__grid > a {
+  background: #1c1c1c !important;
+  border: 1px solid #2d2d2d !important;
+  color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .home-features h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .home-features p {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .home-features b {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .feature-icon {
+  background: #262626 !important;
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .home-collections__grid a,
+[data-theme="dark"] .home-collections__grid a:nth-child(2),
+[data-theme="dark"] .home-collections__grid a:nth-child(3),
+[data-theme="dark"] .home-collections__grid a:nth-child(4) {
+  background: #1c1c1c !important;
+  border: 1px solid #2d2d2d !important;
+  color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .home-collections__grid strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .home-collections__grid span {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .home-collections__grid .material-symbols-outlined {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .home-story__copy h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .home-story__copy > p {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .home-steps > div {
+  border-bottom: 1px solid #282828 !important;
+  color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .home-steps strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .home-steps small {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .home-testimonial {
+  background: #181818 !important;
+  border-top: 1px solid #282828 !important;
+  border-bottom: 1px solid #282828 !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .home-testimonial blockquote {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .home-testimonial span:last-child {
+  color: #a0a0a0 !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. TRANG CHI TIẾT SẢN PHẨM (.product-page)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .product-gallery__stage {
+  background: radial-gradient(circle at 50% 30%, #242424, #141414) !important;
+  border-color: #2d2d2d !important;
+}
+
+[data-theme="dark"] .product-gallery__hint {
+  background: #242424 !important;
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .product-gallery__thumbs button {
+  background: #202020 !important;
+  border-color: #333333 !important;
+}
+
+[data-theme="dark"] .product-summary h1 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-summary__author {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .product-summary__author strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-summary__facts {
+  border-color: #2d2d2d !important;
+}
+
+[data-theme="dark"] .product-summary__facts span {
+  color: #999999 !important;
+}
+
+[data-theme="dark"] .product-summary__facts strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-summary__price strong {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .product-summary__condition {
+  background: #202020 !important;
+  border-color: #333333 !important;
+}
+
+[data-theme="dark"] .product-summary__condition strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-summary__condition p {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .product-condition-grid > div {
+  background: #1e1e1e !important;
+  border: 1px solid #2d2d2d !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .product-condition-grid strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-condition-grid p {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .product-info__aside section {
+  background: #1e1e1e !important;
+  border: 1px solid #2d2d2d !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .product-info__aside h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-info__aside li {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .product-review {
+  background: #202020 !important;
+  border-left-color: #ffb74d !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .product-review p {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .product-recommend {
+  background: #181818 !important;
+  border: 1px solid #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   10. TRANG KÝ GỬI, HỖ TRỢ, ĐƠN HÀNG (.consignment-page, .support, .orders)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .consignment-criteria,
+[data-theme="dark"] .consignment-note-section,
+[data-theme="dark"] .consignment-form-card,
+[data-theme="dark"] .support-search-card,
+[data-theme="dark"] .support-topic-card,
+[data-theme="dark"] .support-policy,
+[data-theme="dark"] .support-topics {
+  background: #181818 !important;
+  border-color: #2d2d2d !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .consignment-flow__step {
+  background: #1c1c1c !important;
+  border: 1px solid #2d2d2d !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .consignment-dropzone,
+[data-theme="dark"] .consignment-add-card {
+  background: #222222 !important;
+  border-color: #383838 !important;
+  color: #e5e5e5 !important;
+}
+
+[data-theme="dark"] .consignment-dropzone:hover,
+[data-theme="dark"] .consignment-dropzone.is-dragover,
+[data-theme="dark"] .consignment-add-card:hover {
+  background: #2a2a2a !important;
+  border-color: var(--pt-amber) !important;
+}
+
+/* Khắc phục triệt để lỗi chữ trùng màu nền trang Ký gửi & Thu mua (Ảnh 1 & Ảnh 2) */
+[data-theme="dark"] .consignment-visual {
+  background: #181818 !important;
+  border: 1px solid #2d2d2d !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .consignment-visual__quote {
+  color: #ffb74d !important;
+  border-top-color: #333333 !important;
+}
+
+[data-theme="dark"] .consignment-visual__quote strong {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .consignment-visual__footer {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .consignment-visual__footer a,
+[data-theme="dark"] .consignment-visual__footer span {
+  color: #d5d5d5 !important;
+}
+
+[data-theme="dark"] .consignment-visual__badge {
+  border-color: #ffb74d !important;
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .consignment-visual__watermark {
+  color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="dark"] .consignment-trust-panel__main {
+  background: #181818 !important;
+  border: 1px solid #2d2d2d !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .consignment-trust-panel__main .page-eyebrow {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .consignment-trust-panel__main h2 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .consignment-trust-panel__main p {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .consignment-trust-list__item {
+  border-top-color: #2d2d2d !important;
+}
+
+[data-theme="dark"] .consignment-trust-list__number {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .consignment-trust-list__item h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .consignment-trust-list__item p {
+  color: #a8a8a8 !important;
+}
+
+[data-theme="dark"] .consignment-trust-panel__extra {
+  background: #1e1e1e !important;
+  border: 1px solid #2d2d2d !important;
+  border-top: 0 !important;
+  color: #f0f0f0 !important;
+}
+
+[data-theme="dark"] .consignment-trust-panel__extra h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .consignment-trust-panel__extra p {
+  color: #b5b5b5 !important;
+  border-top-color: #2d2d2d !important;
+}
+
+[data-theme="dark"] .consignment-section-heading h2,
+[data-theme="dark"] .consignment-criteria h2,
+[data-theme="dark"] .consignment-form-card h2,
+[data-theme="dark"] .consignment-note-grid h2,
+[data-theme="dark"] .process-step h3,
+[data-theme="dark"] .criteria-card h3,
+[data-theme="dark"] .consignment-note h3 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .consignment-section-heading p,
+[data-theme="dark"] .consignment-criteria p,
+[data-theme="dark"] .consignment-form-card p,
+[data-theme="dark"] .consignment-note-grid p,
+[data-theme="dark"] .process-step p,
+[data-theme="dark"] .criteria-card p,
+[data-theme="dark"] .consignment-note p {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .consignment-quote {
+  color: #ffca7b !important;
+  border-left-color: #ffb74d !important;
+}
+
+[data-theme="dark"] .consignment-note__number,
+[data-theme="dark"] .consignment-note__tag,
+[data-theme="dark"] .process-step__meta {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .consignment-dropzone__icon {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .consignment-dropzone__text {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .consignment-dropzone__hint {
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .order-card {
+  background: #1c1c1c !important;
+  border-color: #2d2d2d !important;
+}
+
+[data-theme="dark"] .order-card__header,
+[data-theme="dark"] .order-card__footer {
+  background: #161616 !important;
+  border-color: #2b2b2b !important;
+}
+
+[data-theme="dark"] .order-card__item-title {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .order-card__value,
+[data-theme="dark"] .order-card__total strong {
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   11. NÚT CHUYỂN GIAO DIỆN TRÊN HEADER
+   -------------------------------------------------------------------------- */
+.site-header__theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--pt-line);
+  border-radius: var(--pt-radius-sm);
+  background: var(--pt-white);
+  color: var(--pt-ink);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.site-header__theme-toggle:hover {
+  border-color: var(--pt-amber);
+  color: var(--pt-amber);
+  transform: translateY(-1px);
+}
+
+.site-header__theme-toggle .material-symbols-outlined {
+  color: var(--pt-amber);
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.site-header__theme-toggle:hover .material-symbols-outlined {
+  transform: rotate(20deg);
+}
+
+/* --------------------------------------------------------------------------
+   12. MÀN HÌNH CHỌN SÁNG / TỐI (THEME SELECTOR SCREEN)
+   Bản xem trước chế độ tối dùng màu xám đen trung tính, không ám xanh
+   -------------------------------------------------------------------------- */
+.theme-selector-section {
+  margin-top: 32px;
+}
+
+.theme-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.theme-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 2px solid var(--pt-line);
+  border-radius: var(--pt-radius-md);
+  background: var(--pt-white);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+  text-align: left;
+}
+
+.theme-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--pt-outline);
+  box-shadow: var(--pt-shadow-card);
+}
+
+.theme-card.is-active {
+  border-color: var(--pt-amber);
+  box-shadow: 0 0 0 1px var(--pt-amber), var(--pt-shadow-card);
+}
+
+.theme-card__preview {
+  position: relative;
+  height: 110px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+/* Bản xem trước giao diện sáng */
+.theme-card__preview--light {
+  background: #fbf9f6;
+  border-color: #e6dec8;
+}
+.theme-card__preview--light .preview-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 14px;
+  border-bottom: 1px solid #e6dec8;
+  padding-bottom: 6px;
+}
+.theme-card__preview--light .preview-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1e2d24;
+}
+.theme-card__preview--light .preview-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.theme-card__preview--light .preview-line {
+  height: 6px;
+  border-radius: 3px;
+  background: #d8ceb8;
+}
+.theme-card__preview--light .preview-line--title {
+  width: 60%;
+  background: #1e2d24;
+}
+.theme-card__preview--light .preview-line--short {
+  width: 40%;
+  background: #8a570c;
+}
+
+/* Bản xem trước giao diện tối trung tính */
+.theme-card__preview--dark {
+  background: #121212;
+  border-color: #2e2e2e;
+}
+.theme-card__preview--dark .preview-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 14px;
+  border-bottom: 1px solid #2e2e2e;
+  padding-bottom: 6px;
+}
+.theme-card__preview--dark .preview-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffb74d;
+}
+.theme-card__preview--dark .preview-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.theme-card__preview--dark .preview-line {
+  height: 6px;
+  border-radius: 3px;
+  background: #333333;
+}
+.theme-card__preview--dark .preview-line--title {
+  width: 60%;
+  background: #ffffff;
+}
+.theme-card__preview--dark .preview-line--short {
+  width: 40%;
+  background: #ffb74d;
+}
+
+/* Bản xem trước tự động theo hệ thống */
+.theme-card__preview--system {
+  background: linear-gradient(135deg, #fbf9f6 50%, #121212 50%);
+  border-color: #555555;
+}
+.theme-card__preview--system .preview-split-indicator {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24px;
+}
+.theme-card__preview--system .preview-split-indicator span:first-child {
+  color: #1e2d24;
+}
+.theme-card__preview--system .preview-split-indicator span:last-child {
+  color: #ffb74d;
+}
+
+.theme-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.theme-card__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--pt-forest);
+}
+
+.theme-card__title .material-symbols-outlined {
+  color: var(--pt-amber);
+  font-size: 20px;
+}
+
+.theme-card__badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: var(--pt-radius-pill);
+  background: var(--pt-paper);
+  color: var(--pt-muted);
+}
+
+.theme-card.is-active .theme-card__badge {
+  background: var(--pt-amber);
+  color: #121212;
+  font-weight: 700;
+}
+
+.theme-card__desc {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--pt-muted);
+  line-height: 1.6;
+}
+
+.theme-status-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: var(--pt-radius-sm);
+  background: var(--pt-paper);
+  border: 1px solid var(--pt-line);
+  font-size: 13.5px;
+  color: var(--pt-ink);
+}
+
+.theme-status-banner .material-symbols-outlined {
+  color: var(--pt-amber);
+  font-size: 22px;
+}
+
+@media (max-width: 860px) {
+  .theme-options-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header__theme-toggle .site-header__theme-label {
+    display: none;
+  }
+  .site-header__theme-toggle {
+    padding: 0 10px;
+    min-height: 38px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. NÂNG CAO ĐỘ TƯƠNG PHẢN HỒ SƠ & CÀI ĐẶT (.pt-account-context & .settings-info-card)
+   Khắc phục triệt để lỗi chữ mờ, nền sữa và nút bấm trắng trên nền tối
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] .site-header__logout-button {
+  border-color: #383838;
+  color: #c0c0c0;
+  background: #1c1c1c;
+}
+
+[data-theme="dark"] .site-header__logout-button:hover {
+  border-color: #ff6b6b;
+  color: #ff8585;
+  background: #2a1515;
+}
+
+/* Ngữ cảnh tài khoản (.pt-account-context) */
+[data-theme="dark"] .pt-account-context {
+  background: #181818 !important;
+  border-color: #2e2e2e !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .pt-account-context__avatar {
+  background: #252525 !important;
+  color: #ffca7b !important;
+  border: 1px solid #3d3d3d !important;
+}
+
+[data-theme="dark"] .pt-account-context__name {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .pt-account-context__meta {
+  color: #c5c5c5 !important;
+}
+
+[data-theme="dark"] .pt-account-context__metrics {
+  background: #141414 !important;
+  border-top-color: #2b2b2b !important;
+}
+
+[data-theme="dark"] .pt-account-context__metric {
+  border-left-color: #2b2b2b !important;
+}
+
+[data-theme="dark"] .pt-account-context__metric-label {
+  color: #a8a8a8 !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .pt-account-context__metric-value {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="dark"] .pt-account-context__metric-value small {
+  color: #ffb74d !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="dark"] .pt-account-context__nav {
+  background: #181818 !important;
+  border-top-color: #2b2b2b !important;
+}
+
+[data-theme="dark"] .pt-account-context__nav-link {
+  color: #b5b5b5 !important;
+}
+
+[data-theme="dark"] .pt-account-context__nav-link:hover:not(.is-active) {
+  background: #252525 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .pt-account-context__nav-link.is-active {
+  background: var(--pt-amber) !important;
+  color: #121212 !important;
+  font-weight: 700 !important;
+}
+
+/* Toàn bộ hệ thống huy hiệu (Badges) ở chế độ tối - Tương phản cao, rõ ràng */
+[data-theme="dark"] .pt-badge--active {
+  background: #33240e !important;
+  color: #ffca7b !important;
+  border-color: rgba(245, 166, 35, 0.45) !important;
+}
+
+[data-theme="dark"] .pt-badge--new {
+  background: #14281a !important;
+  color: #86efac !important;
+  border-color: #275232 !important;
+}
+
+[data-theme="dark"] .pt-badge--neutral {
+  background: #222222 !important;
+  color: #d1d1d1 !important;
+  border-color: #383838 !important;
+}
+
+[data-theme="dark"] .pt-badge--good {
+  background: #2d2410 !important;
+  color: #fde047 !important;
+  border-color: #4a3c19 !important;
+}
+
+[data-theme="dark"] .pt-badge--used {
+  background: #2b1f15 !important;
+  color: #fed7aa !important;
+  border-color: #483424 !important;
+}
+
+[data-theme="dark"] .pt-badge--worn {
+  background: #321619 !important;
+  color: #fca5a5 !important;
+  border-color: #55242a !important;
+}
+
+[data-theme="dark"] .pt-badge--rare {
+  background: #38121d !important;
+  color: #ffd9dd !important;
+  border-color: #58212e !important;
+}
+
+/* Thẻ thông tin cài đặt (.settings-info-card & .settings-section) */
+[data-theme="dark"] .settings-info-card {
+  background: #181818 !important;
+  border-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-info-card__header h2,
+[data-theme="dark"] .settings-info-card h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-info-card__eyebrow {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .settings-info-card__body {
+  border-top-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-info-card__body strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-info-card__address {
+  color: #c0c0c0 !important;
+}
+
+[data-theme="dark"] .settings-info-card__rows {
+  border-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-info-card__row {
+  border-top-color: #2e2e2e !important;
+  color: #a0a0a0 !important;
+}
+
+[data-theme="dark"] .settings-info-card__row strong {
+  color: #ffffff !important;
+}
+
+/* Nút bấm ở thẻ thông tin - Xóa bỏ nền trắng User-Agent, nền tối chữ sáng rõ nét */
+[data-theme="dark"] .settings-info-card__link {
+  background: #242424 !important;
+  border: 1px solid #383838 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-info-card__link:hover {
+  background: #2e2e2e !important;
+  border-color: var(--pt-amber) !important;
+  color: #ffca7b !important;
+}
+
+/* Nhãn e-ID & cài đặt khác */
+[data-theme="dark"] .settings-readonly-badge {
+  color: #ffca7b !important;
+  border-left-color: #383838 !important;
+}
+
+[data-theme="dark"] .settings-privacy {
+  background: #1c1c1c !important;
+  border-left-color: var(--pt-amber) !important;
+  color: #b8b8b8 !important;
+}
+
+[data-theme="dark"] .settings-notifications {
+  background: #181818 !important;
+  border-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-notifications h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-notifications p {
+  color: #a8a8a8 !important;
+}
+
+[data-theme="dark"] .settings-notifications__grid {
+  border-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-notification {
+  color: #a8a8a8 !important;
+}
+
+[data-theme="dark"] .settings-notification + .settings-notification {
+  border-left-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-notification strong {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-nav,
+[data-theme="dark"] .settings-section {
+  background: #181818 !important;
+  border-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-nav__header {
+  border-bottom-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-nav__header h2,
+[data-theme="dark"] .settings-section__header h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-nav__eyebrow {
+  color: #ffb74d !important;
+}
+
+[data-theme="dark"] .settings-nav__link {
+  color: #a8a8a8 !important;
+}
+
+[data-theme="dark"] .settings-nav__link:hover:not(.is-active) {
+  background: #222222 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-nav__notice {
+  border-top-color: #2e2e2e !important;
+  color: #989898 !important;
+}
+
+[data-theme="dark"] .settings-section__header {
+  border-bottom-color: #2e2e2e !important;
+}
+
+[data-theme="dark"] .settings-heading h1 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .settings-heading p {
+  color: #b0b0b0 !important;
+}
+
+[data-theme="dark"] .auth-status-card {
+  background: #1e1e1e !important;
+  border-color: #333333 !important;
+}
+
+[data-theme="dark"] select option {
+  background: #222222 !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode cart styles */
+[data-theme="dark"] .cart-heading h1 {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .cart-heading p,
+[data-theme="dark"] .cart-stat span {
+  color: #b0b0b0 !important;
+}
+[data-theme="dark"] .cart-stat strong {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .cart-empty-card,
+[data-theme="dark"] .cart-items-card,
+[data-theme="dark"] .cart-summary-card {
+  background: #181818 !important;
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .cart-empty-card h2,
+[data-theme="dark"] .cart-items-card__head h2,
+[data-theme="dark"] .cart-summary-card h2 {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .cart-items-card__head,
+[data-theme="dark"] .cart-items-card__foot {
+  background: #1f1f1f !important;
+  border-color: #2e2e2e !important;
+}
+[data-theme="dark"] .cart-item {
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .cart-item:hover {
+  background: #1d1d1d !important;
+}
+[data-theme="dark"] .cart-item__title a {
+  color: #f5f5f5 !important;
+}
+[data-theme="dark"] .cart-item__title a:hover {
+  color: #ffb74d !important;
+}
+[data-theme="dark"] .cart-item__author,
+[data-theme="dark"] .cart-summary-row span,
+[data-theme="dark"] .cart-reassurance-item {
+  color: #a8a8a8 !important;
+}
+[data-theme="dark"] .cart-item__unit-price,
+[data-theme="dark"] .cart-item__subtotal strong,
+[data-theme="dark"] .cart-total-amount {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .cart-qty-ctrl {
+  background: #242424 !important;
+  border-color: #383838 !important;
+}
+[data-theme="dark"] .cart-qty-btn {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .cart-qty-btn:hover:not(:disabled) {
+  background: #333333 !important;
+}
+[data-theme="dark"] .cart-qty-input {
+  color: #ffffff !important;
+  border-color: #383838 !important;
+}
+[data-theme="dark"] .cart-voucher-box {
+  background: #202020 !important;
+  border-color: #333333 !important;
+}
+[data-theme="dark"] .cart-voucher-form input {
+  background: #141414 !important;
+  border-color: #383838 !important;
+  color: #ffffff !important;
+}
+[data-theme="dark"] .cart-summary-row {
+  color: #e0e0e0 !important;
+}
+[data-theme="dark"] .cart-total-label {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .site-header__action b {
+  background: #c9933e !important;
+  color: #121815 !important;
+}
+[data-theme="dark"] .site-header__action b[data-wishlist-count] {
+  background: #ff4d6d !important;
+  color: #ffffff !important;
+}
+
+/* Dark Theme Overrides for Checkout & Order Flow */
+[data-theme="dark"] .checkout-stepper {
+  background: #181818 !important;
+  border-color: #2c2c2c !important;
+}
+[data-theme="dark"] .checkout-step {
+  color: #888888 !important;
+}
+[data-theme="dark"] .checkout-step.is-active,
+[data-theme="dark"] .checkout-step.is-complete {
+  color: #6ee7b7 !important;
+}
+[data-theme="dark"] .checkout-step__num {
+  border-color: #555555 !important;
+  color: #cccccc !important;
+}
+[data-theme="dark"] .checkout-step.is-active .checkout-step__num {
+  background: #264634 !important;
+  border-color: #6ee7b7 !important;
+  color: #ffffff !important;
+}
+[data-theme="dark"] .checkout-step.is-complete .checkout-step__num {
+  background: rgba(110, 231, 183, 0.15) !important;
+  border-color: #6ee7b7 !important;
+  color: #6ee7b7 !important;
+}
+[data-theme="dark"] .checkout-step__line {
+  background: #333333 !important;
+}
+[data-theme="dark"] .checkout-step__line.is-active {
+  background: #264634 !important;
+}
+[data-theme="dark"] .checkout-back-link {
+  color: #a7f3d0 !important;
+}
+[data-theme="dark"] .checkout-card {
+  background: #161616 !important;
+  border-color: #2a2a2a !important;
+}
+[data-theme="dark"] .checkout-card__title-wrap h2 {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .checkout-card__head,
+[data-theme="dark"] .checkout-note-group {
+  border-color: #2c2c2c !important;
+}
+[data-theme="dark"] .checkout-option-card {
+  background: #1e1e1e !important;
+  border-color: #333333 !important;
+}
+[data-theme="dark"] .checkout-option-card:hover {
+  border-color: #4a755d !important;
+}
+[data-theme="dark"] .checkout-option-card.is-selected {
+  background: #1b2620 !important;
+  border-color: #34d399 !important;
+}
+[data-theme="dark"] .checkout-address-info__header strong,
+[data-theme="dark"] .checkout-shipping-title strong,
+[data-theme="dark"] .checkout-payment-title strong {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .checkout-tag {
+  background: #2a2a2a !important;
+  color: #e0e0e0 !important;
+}
+[data-theme="dark"] .checkout-new-address-form {
+  background: #1c1c1c !important;
+  border-color: #383838 !important;
+}
+[data-theme="dark"] .checkout-form-group label,
+[data-theme="dark"] .checkout-note-group label {
+  color: #e0e0e0 !important;
+}
+[data-theme="dark"] .checkout-form-group input,
+[data-theme="dark"] .checkout-form-group select,
+[data-theme="dark"] .checkout-note-group textarea {
+  background: #141414 !important;
+  border-color: #383838 !important;
+  color: #ffffff !important;
+}
+[data-theme="dark"] .checkout-badge-pill {
+  background: #2a2a2a !important;
+  color: #e0e0e0 !important;
+}
+[data-theme="dark"] .checkout-badge-pill--green {
+  background: rgba(110, 231, 183, 0.15) !important;
+  color: #a7f3d0 !important;
+}
+[data-theme="dark"] .checkout-payment-subbox {
+  background: #181818 !important;
+  border-color: #34d399 !important;
+}
+[data-theme="dark"] .vietqr-preview-row,
+[data-theme="dark"] .order-cod-instructions {
+  color: #e5e5e5 !important;
+}
+[data-theme="dark"] .vietqr-acc-highlight {
+  color: #a7f3d0 !important;
+}
+[data-theme="dark"] .vietqr-preview-note {
+  background: #1f2b23 !important;
+  color: #a7f3d0 !important;
+}
+[data-theme="dark"] .wallet-option {
+  background: #181818 !important;
+  border-color: #333333 !important;
+}
+[data-theme="dark"] .wallet-option.is-selected {
+  background: #1c2720 !important;
+  border-color: #34d399 !important;
+}
+[data-theme="dark"] .wallet-option strong {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .checkout-mini-item__name {
+  color: #e5e5e5 !important;
+}
+[data-theme="dark"] .checkout-mini-item__price {
+  color: #6ee7b7 !important;
+}
+[data-theme="dark"] .order-success-hero h1 {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .order-payment-box {
+  background: #161616 !important;
+  border-color: #2c2c2c !important;
+}
+[data-theme="dark"] .order-payment-box--banking {
+  background: #17211a !important;
+  border-color: #2e4a38 !important;
+}
+[data-theme="dark"] .order-payment-box__header h2 {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .vietqr-detail-row {
+  background: #1f1f1f !important;
+  border-color: #333333 !important;
+}
+[data-theme="dark"] .vqr-val-group strong {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .vqr-highlight {
+  color: #6ee7b7 !important;
+}
+[data-theme="dark"] .vqr-memo-text {
+  background: #264634 !important;
+  color: #a7f3d0 !important;
+}
+[data-theme="dark"] .vietqr-instruction-alert,
+[data-theme="dark"] .order-cod-reminder {
+  background: #1b2820 !important;
+  color: #a7f3d0 !important;
+}
+[data-theme="dark"] .order-receipt-card {
+  background: #161616 !important;
+  border-color: #2c2c2c !important;
+}
+[data-theme="dark"] .order-receipt-card__header h2 {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .order-receipt-card__header,
+[data-theme="dark"] .order-receipt-meta-grid,
+[data-theme="dark"] .order-receipt-pricing {
+  border-color: #2c2c2c !important;
+}
+[data-theme="dark"] .order-receipt-meta-col h3,
+[data-theme="dark"] .order-receipt-items-table h3 {
+  color: #a7f3d0 !important;
+}
+[data-theme="dark"] .order-receipt-meta-col p,
+[data-theme="dark"] .order-receipt-price-row {
+  color: #e5e5e5 !important;
+}
+[data-theme="dark"] .order-receipt-item-row {
+  background: #1e1e1e !important;
+  border-color: #303030 !important;
+}
+[data-theme="dark"] .order-receipt-item-info strong {
+  color: #ffffff !important;
+}
+[data-theme="dark"] .order-receipt-item-price,
+[data-theme="dark"] .order-receipt-total-row strong {
+  color: #6ee7b7 !important;
+}
+
