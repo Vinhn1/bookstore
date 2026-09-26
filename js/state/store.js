@@ -21,9 +21,9 @@ export const initialAddresses = [
     id: 'addr-1',
     name: 'Nguyễn Hoàng Hải',
     phone: '0912 845 678',
-    province: 'Hà Nội',
-    district: 'Quận Hoàn Kiếm',
-    address: 'Phòng 402, Nhà cổ số 18 Phố Chân Cầm, Phường Hàng Trống',
+    province: 'Vĩnh Long',
+    district: 'TP. Vĩnh Long',
+    address: 'Số 12 Trưng Nữ Vương, Phường 1',
     tag: 'Nhà riêng',
     isDefault: true
   },
@@ -31,9 +31,9 @@ export const initialAddresses = [
     id: 'addr-2',
     name: 'Nguyễn Hoàng Hải',
     phone: '0912 845 678',
-    province: 'Hà Nội',
-    district: 'Quận Hoàn Kiếm',
-    address: 'Tầng 2, 42 Tràng Tiền, Phường Tràng Tiền',
+    province: 'Vĩnh Long',
+    district: 'Huyện Long Hồ',
+    address: 'Số 88 Khóm 1, Thị trấn Long Hồ',
     tag: 'Thư phòng',
     isDefault: false
   },
@@ -228,7 +228,7 @@ export function checkoutCart({
   const defaultAddr = (state.addresses || []).find((a) => a.isDefault) || state.addresses?.[0];
   const finalRecipientName = recipientName || state.account?.name || 'Nguyễn Hoàng Hải';
   const finalRecipientPhone = recipientPhone || state.account?.phone || '0912 845 678';
-  const finalShippingAddress = shippingAddress || (defaultAddr ? `${defaultAddr.address}, ${defaultAddr.district}, ${defaultAddr.province}` : 'Hà Nội');
+  const finalShippingAddress = shippingAddress || (defaultAddr ? `${defaultAddr.address}, ${defaultAddr.district}, ${defaultAddr.province}` : 'Số 12 Trưng Nữ Vương, Phường 1, TP. Vĩnh Long');
 
   let paymentLabel = 'Thanh toán khi nhận hàng (COD)';
   let paymentStatus = 'Chưa thanh toán (Thu hộ khi nhận hàng)';

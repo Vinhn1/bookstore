@@ -45,7 +45,7 @@ export function mountConsignment(root) {
             Bản thảo của bạn<strong>Có thể là một phát hiện mới.</strong>
           </div>
           <div class="consignment-visual__footer">
-            <span>Hà Nội · từ 2018</span>
+            <span>Vĩnh Long · từ 2018</span>
             <strong>→ Bắt đầu gửi</strong>
           </div>
         </div>

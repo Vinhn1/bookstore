@@ -1,4 +1,4 @@
-﻿import { books } from "../data.js";
+import { books } from "../data.js";
 import { renderBreadcrumb, showToast } from "../components/shell.js";
 import { getState, removeFromCart, updateCartQuantity, clearCart, checkoutCart, addToWishlist } from "../state/store.js";
 import { formatVnd, escapeHtml } from "../utils/formatters.js";
@@ -104,8 +104,8 @@ export function mountCart(root) {
   let newAddressData = {
     name: state.account?.name || 'Nguyễn Hoàng Hải',
     phone: state.account?.phone || '0912 845 678',
-    province: 'Hà Nội',
-    district: 'Quận Hoàn Kiếm',
+    province: 'Vĩnh Long',
+    district: 'TP. Vĩnh Long',
     address: ''
   };
 
@@ -442,7 +442,7 @@ export function mountCart(root) {
                         </div>
                         <span class="checkout-shipping-price cart-text-green">Miễn phí</span>
                       </div>
-                      <p class="checkout-shipping-desc">Giao trong 2 – 3 ngày làm việc (Nội thành Hà Nội trong 24h). Hộp carton 3 lớp, bọc màng chống ẩm chuyên dụng.</p>
+                      <p class="checkout-shipping-desc">Giao trong 2 – 3 ngày làm việc (Nội ô Vĩnh Long trong 24h). Hộp carton 3 lớp, bọc màng chống ẩm chuyên dụng.</p>
                     </div>
                   </label>
 
@@ -524,7 +524,7 @@ export function mountCart(root) {
                           <div class="vietqr-preview-badge">Tài khoản chính thức của Tiệm sách</div>
                           <div class="vietqr-preview-row">
                             <span>Ngân hàng thụ hưởng:</span>
-                            <strong>Vietcombank (VCB) · CN Sở Giao Dịch Hà Nội</strong>
+                            <strong>Vietcombank (VCB) · CN Vĩnh Long</strong>
                           </div>
                           <div class="vietqr-preview-row">
                             <span>Số tài khoản:</span>
@@ -768,7 +768,7 @@ export function mountCart(root) {
                   <div class="vietqr-detail-row">
                     <span class="vqr-label">Ngân hàng:</span>
                     <div class="vqr-val-group">
-                      <strong>Vietcombank (VCB) — CN Sở Giao Dịch Hà Nội</strong>
+                      <strong>Vietcombank (VCB) — CN Vĩnh Long</strong>
                     </div>
                   </div>
 
@@ -1227,7 +1227,7 @@ export function mountCart(root) {
         } else {
           finalName = state.account?.name || 'Nguyễn Hoàng Hải';
           finalPhone = state.account?.phone || '0912 845 678';
-          finalAddress = '42 Tràng Tiền, Quận Hoàn Kiếm, Hà Nội';
+          finalAddress = 'Số 12 Trưng Nữ Vương, Phường 1, TP. Vĩnh Long';
         }
       }
 

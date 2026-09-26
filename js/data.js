@@ -30,7 +30,7 @@ export const orders = [
   {
     id: 'PT-2025-0894X', placedAt: '2025-02-21', paymentLabel: 'Đã thanh toán · Chuyển khoản', status: 'shipping', eta: '25/02/2025', total: 1315000, carrier: 'Giao Hàng Nhanh', trackingCode: 'GHN-PT0894X',
     items: [{ bookId: 'so-do', quantity: 1, price: 1250000, packaging: 'Archival Preservation' }, { bookId: 'mat-biec', quantity: 1, price: 65000, packaging: 'Chống ẩm chuyên dụng' }],
-    timeline: [{ label: 'Đã tiếp nhận đơn hàng', date: '21/02 · 09:14', state: 'done' }, { label: 'Đã đóng gói & bàn giao', date: '23/02 · 16:20', state: 'done' }, { label: 'Đang giao đến bạn', date: 'Dự kiến 25/02 · Hà Nội', state: 'active' }, { label: 'Giao hàng thành công', date: 'Chưa cập nhật', state: 'pending' }]
+    timeline: [{ label: 'Đã tiếp nhận đơn hàng', date: '21/02 · 09:14', state: 'done' }, { label: 'Đã đóng gói & bàn giao', date: '23/02 · 16:20', state: 'done' }, { label: 'Đang giao đến bạn', date: 'Dự kiến 25/02 · Vĩnh Long', state: 'active' }, { label: 'Giao hàng thành công', date: 'Chưa cập nhật', state: 'pending' }]
   },
   {
     id: 'PT-2024-1120B', placedAt: '2024-12-14', paymentLabel: 'Đã thanh toán · Visa', status: 'completed', eta: '18/12/2024', total: 485000, carrier: 'Giao Hàng Nhanh', trackingCode: 'GHN-PT1120B',
@@ -41,14 +41,14 @@ export const orders = [
 
 export const faqs = [
   { id: 'payment', topic: 'Đặt hàng & thanh toán', question: 'Tôi có thể thanh toán bằng hình thức nào?', answer: 'Bạn có thể chuyển khoản, thanh toán khi nhận hàng hoặc dùng Visa, Mastercard, JCB và ví điện tử. Đơn được xác nhận sau khi thanh toán thành công.' },
-  { id: 'shipping', topic: 'Giao nhận & đóng gói', question: 'Sách được bọc và gửi đi như thế nào?', answer: 'Mỗi cuốn được kiểm tra lần cuối, bọc chống ẩm, chèn góc và đặt trong hộp cứng. Đơn nội thành Hà Nội thường đến trong 1–2 ngày.' },
+  { id: 'shipping', topic: 'Giao nhận & đóng gói', question: 'Sách được bọc và gửi đi như thế nào?', answer: 'Mỗi cuốn được kiểm tra lần cuối, bọc chống ẩm, chèn góc và đặt trong hộp cứng. Đơn nội ô Vĩnh Long thường đến trong 1–2 ngày.' },
   { id: 'condition', topic: 'Tình trạng sách & đổi trả', question: '“Tốt (85%)” trên trang sách có nghĩa là gì?', answer: 'Đó là mức đánh giá tổng hợp về bìa, gáy, ruột và độ sạch của sách. Mọi dấu vết đáng chú ý đều được ghi rõ trong phần mô tả.' },
   { id: 'returns', topic: 'Tình trạng sách & đổi trả', question: 'Tôi có được đổi sách nếu nhận hàng không đúng mô tả?', answer: 'Có. Hãy liên hệ trong vòng 7 ngày kể từ khi nhận hàng nếu sách có lỗi không được ghi trong mô tả và giữ lại bao bì ban đầu.' },
   { id: 'certificate', topic: 'Chứng thư & nguồn gốc', question: 'Làm sao tra cứu chứng thư điện tử của một ấn bản?', answer: 'Bạn có thể mở Kệ sách cá nhân, chọn ấn bản tương ứng và tra cứu mã e-ID trên chứng thư. Thủ thư cũng có thể hỗ trợ kiểm tra nguồn gốc.' }
 ];
 
 export const account = {
-  name: 'Nguyễn Hoàng Hải', email: 'hoanghai.nguyen@archival.vn', phone: '0912 845 678', readerId: 'TPT-HANOI-8456', rank: 'Thủ thư Danh dự', city: 'Hà Nội', district: 'Quận Hoàn Kiếm', address: 'Phòng 402, Nhà cổ số 18 Phố Chân Cầm, Phường Hàng Trống',
+  name: 'Nguyễn Hoàng Hải', email: 'hoanghai.nguyen@archival.vn', phone: '0912 845 678', readerId: 'TPT-VINHLONG-8456', rank: 'Thủ thư Danh dự', city: 'Vĩnh Long', district: 'TP. Vĩnh Long', address: 'Số 12 Trưng Nữ Vương, Phường 1',
   metrics: { collection: 14, certificates: 5, shipments: 2, totalValue: 8450000 },
   notifications: { rareBooks: true, orders: true }
 };

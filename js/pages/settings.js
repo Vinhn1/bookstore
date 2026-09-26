@@ -60,7 +60,7 @@ function renderNav(activeTab) {
    VIEW 1: THÔNG TIN CÁ NHÂN
    -------------------------------------------------------------------------- */
 function renderPersonalInfoView(current) {
-  const selectedProvince = current.city || 'Hà Nội';
+  const selectedProvince = current.city || 'Vĩnh Long';
   const districts = getDistrictsByProvince(selectedProvince);
   const selectedDistrict = current.district || districts[0];
 
@@ -378,7 +378,7 @@ function renderSecurityView(current) {
             <span class="material-symbols-outlined" style="font-size:24px;color:var(--pt-amber)">laptop_mac</span>
             <div>
               <strong style="color:var(--pt-forest);font-size:14px">Chrome trên Windows 11</strong>
-              <div style="font-size:12px;color:var(--pt-muted)">Hà Nội, Việt Nam · IP: 118.70.x.x · Thiết bị này</div>
+              <div style="font-size:12px;color:var(--pt-muted)">Vĩnh Long, Việt Nam · IP: 118.70.x.x · Thiết bị này</div>
             </div>
           </div>
           <span class="pt-badge pt-badge--new">● Đang hoạt động</span>
@@ -388,7 +388,7 @@ function renderSecurityView(current) {
             <span class="material-symbols-outlined" style="font-size:24px;color:var(--pt-muted)">smartphone</span>
             <div>
               <strong style="color:var(--pt-forest);font-size:14px">Safari trên iPhone 15 Pro</strong>
-              <div style="font-size:12px;color:var(--pt-muted)">Hà Nội, Việt Nam · Đăng nhập 2 ngày trước</div>
+              <div style="font-size:12px;color:var(--pt-muted)">Vĩnh Long, Việt Nam · Đăng nhập 2 ngày trước</div>
             </div>
           </div>
           <span style="font-size:12px;color:var(--pt-muted)">24/02/2025</span>
@@ -402,7 +402,7 @@ function renderSecurityView(current) {
    VIEW 4: ĐỊA CHỈ ĐÃ LƯU
    -------------------------------------------------------------------------- */
 function renderAddressesView(addresses, current) {
-  const defaultProv = 'Hà Nội';
+  const defaultProv = 'Vĩnh Long';
   const defaultDistricts = getDistrictsByProvince(defaultProv);
 
   return `<div>
